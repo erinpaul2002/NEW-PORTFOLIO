@@ -736,7 +736,6 @@
     margin: 0 -15px;
     padding: 25px;
     padding-bottom: 25px;
-    
     overflow-x: auto;
     scroll-behavior: smooth;
     overscroll-behavior-inline: contain;
@@ -750,8 +749,8 @@
   }
   
   .tech-item img {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     filter: grayscale(1);
     transition: var(--transition-1);
   }
@@ -1508,13 +1507,15 @@
      * #PORTFOLIO, BLOG
      */
   
-    .project-img, .blog-banner-box { border-radius: 16px; }
+    .project-img{ 
+      border-radius: 16px; 
+      width: 250px;
+      height: 150px;
+    }
   
-    .blog-posts-list { gap: 30px; }
+ 
   
-    .blog-content { padding: 25px; }
-  
-  
+    
   
     /**
      * #CONTACT
