@@ -94,3 +94,24 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
   });
 }
+
+function openVideoPopup(element) {
+  const videoSrc = element.closest('.project-item').getAttribute('data-video-src');
+  const videoId = videoSrc.split('v=')[1]; // Extract the video ID from the original URL
+  const embedUrl = `https://www.youtube.com/embed/${videoId}`; // Create the embed URL
+  const videoPopup = document.getElementById('videoPopup');
+  const videoIframe = document.getElementById('videoIframe');
+
+  // Set the iframe source to the embeddable video URL
+  videoIframe.src = embedUrl;
+  videoPopup.style.display = 'block';
+}
+
+function closeVideoPopup() {
+  const videoPopup = document.getElementById('videoPopup');
+  const videoIframe = document.getElementById('videoIframe');
+
+  // Stop the video and hide the popup
+  videoIframe.src = '';
+  videoPopup.style.display = 'none';
+}

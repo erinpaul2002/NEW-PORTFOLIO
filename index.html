@@ -595,29 +595,24 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="python">
+            <li class="project-item active" data-filter-item data-category="nextjs" data-video-src="https://www.youtube.com/watch?v=Khfs-lmJxl0">
               <a href="#">
-
                 <figure class="project-img">
-                  <div class="project-item-icon-box">
+                  <div class="project-item-icon-box" onclick="openVideoPopup(this)">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/project-youtube.png" alt="youtube transcriber" loading="lazy">
+                  <img src="./assets/images/project-snapsync.png" alt="snapsync" loading="lazy">
                 </figure>
-
-                <h3 class="project-title">YouTube Transcriber</h3>
-
-                <p class="project-category">Python</p>
-
+                <h3 class="project-title">SnapSync</h3>
+                <p class="project-category">Nextjs</p>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="react">
+            <li class="project-item  active" data-filter-item data-category="react" data-video-src="https://www.youtube.com/watch?v=dk7PLIf-CNs">
               <a href="#">
 
                 <figure class="project-img">
-                  <div class="project-item-icon-box">
+                  <div class="project-item-icon-box" onclick="openVideoPopup(this)">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
@@ -631,23 +626,27 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="nextjs">
+            <li class="project-item active" data-filter-item data-category="python" data-video-src="https://www.youtube.com/watch?v=s2UEkhpNOcA">
               <a href="#">
-
                 <figure class="project-img">
-                  <div class="project-item-icon-box">
+                  <div class="project-item-icon-box" onclick="openVideoPopup(this)">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/project-snapsync.png" alt="snapsync" loading="lazy">
+                  <img src="./assets/images/project-youtube.png" alt="youtube transcriber" loading="lazy">
                 </figure>
-
-                <h3 class="project-title">SnapSync</h3>
-
-                <p class="project-category">Nextjs</p>
-
+                <h3 class="project-title">YouTube Transcriber</h3>
+                <p class="project-category">Python</p>
               </a>
             </li>
+            
+            <!-- Video Popup -->
+            <div id="videoPopup" class="video-popup">
+              <div class="video-popup-content">
+                <span class="close-btn" onclick="closeVideoPopup()">&times;</span>
+                <iframe id="videoIframe" width="90%" height="100%" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+            
 
 
           </ul>
@@ -713,6 +712,8 @@
   <!--ionicon link-->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
 
 </body>
 
